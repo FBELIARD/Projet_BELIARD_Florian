@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_beliard.R
 
-class CountryAdapter(private var dataSet: List<Country>) :
-        RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
+class CountryAdapter(private var dataSet: List<Country>, var listener :((Country) -> Unit)? = null) : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
+
 
     /**
      * Provide a reference to the type of views that you are using
@@ -44,6 +44,9 @@ class CountryAdapter(private var dataSet: List<Country>) :
         // contents of the view with that element
         val country : Country = dataSet[position]
         viewHolder.textView.text = country.name
+        viewHolder.itemView.setOnClickListener {
+            listener?.invoke(country)
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)

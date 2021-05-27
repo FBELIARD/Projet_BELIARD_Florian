@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project_beliard.R
@@ -24,7 +25,7 @@ class CountryListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
 
-    private val adapter = CountryAdapter(listOf<Country>())
+    private val adapter = CountryAdapter(listOf(), ::onClickedPokemon)
     private val layoutManager = LinearLayoutManager(context)
 
     override fun onCreateView(
@@ -39,6 +40,7 @@ class CountryListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerView = view.findViewById(R.id.country_recyclerview)
+
 
         recyclerView.apply {
             layoutManager = this@CountryListFragment.layoutManager
@@ -71,5 +73,9 @@ class CountryListFragment : Fragment() {
 
 
 
+    }
+
+    private fun onClickedPokemon(country: Country) {
+        findNavController().navigate(R.id.navigateToPokemonDetailFragment)
     }
 }

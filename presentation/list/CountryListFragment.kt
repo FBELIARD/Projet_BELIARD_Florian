@@ -1,5 +1,6 @@
 package com.example.project_beliard.presentation.list
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -28,6 +29,7 @@ class CountryListFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
 
     private val adapter = CountryAdapter(listOf(), ::onClickedPokemon)
+
     private val layoutManager = LinearLayoutManager(context)
 
     override fun onCreateView(
@@ -50,8 +52,27 @@ class CountryListFragment : Fragment() {
         }
 
 
+        //val list = getListFromCache()
+        //if(list.isEmpty()) {
+            callApi()
+        //} else {
+        //    showList(list)
+        //}
 
-        Singletons.countryApi.getPokemonList().enqueue(object: Callback<PokemonListResponse> {
+
+
+    }
+
+    //private fun getListFromCache(): List<Country> {
+
+    //}
+
+    private fun saveListIntoCache() {
+
+    }
+
+    private fun callApi() {
+        Singletons.countryApi.getPokemonList().enqueue(object : Callback<PokemonListResponse> {
             override fun onFailure(call: Call<PokemonListResponse>, t: Throwable) {
                 TODO("Not yet implemented")
             }
@@ -59,15 +80,16 @@ class CountryListFragment : Fragment() {
             override fun onResponse(call: Call<PokemonListResponse>, response: Response<PokemonListResponse>) {
                 if (response.isSuccessful && response.body() != null) {
                     val pokemonResponse = response.body()!!
-                    adapter.updateList(pokemonResponse.results)
+                    saveListIntoCache()
+                    showList(pokemonResponse.results)
                 }
             }
 
         })
+    }
 
-
-
-
+    private fun showList(pokeList: List<Country>) {
+        adapter.updateList(pokeList)
     }
 
     private fun onClickedPokemon(id: Int) {

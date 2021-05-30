@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/CountryListFragment"
-        android:name="com.example.final_project_beliard.presentation.list.CountryListFragment"
+        android:name="com.example.final_project_beliard.presentation.list.PokeListFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_country_list">
+        tools:layout="@layout/fragment_poke_list">
 
         <action
             android:id="@+id/navigateToPokemonDetailFragment"
@@ -17,9 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/PokemonDetailFragment"
-        android:name="com.example.final_project_beliard.presentation.detail.PokemonDetailFragment"
+        android:name="com.example.final_project_beliard.presentation.detail.PokeDetailFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_pokemon_detail">
+        tools:layout="@layout/fragment_poke_detail">
         <argument
             android:name="pokemonId"
             app:argType="integer"

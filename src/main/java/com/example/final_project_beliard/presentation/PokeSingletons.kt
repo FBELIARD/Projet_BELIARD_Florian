@@ -12,6 +12,7 @@ import java.io.File
 class PokeSingletons {
     companion object {
 
+        //Value (and class) for the cache, which help the user to navigate in the application without Internet
         var cache: Cache = Cache(File(context?.cacheDir, "responses"), 10 * 1024 * 1024)
 
         val okHttpClient: OkHttpClient = OkHttpClient().newBuilder()

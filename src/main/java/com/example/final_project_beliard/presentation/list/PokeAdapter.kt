@@ -27,6 +27,7 @@ class PokeAdapter(private var dataSet: List<Poke>, var listener :((Int) -> Unit)
         }
     }
 
+    //Update the List of Pokemon (as we can expect from this name)
     fun updateList(list: List<Poke>) {
         dataSet = list
         notifyDataSetChanged()
@@ -52,6 +53,7 @@ class PokeAdapter(private var dataSet: List<Poke>, var listener :((Int) -> Unit)
             listener?.invoke(position)
         }
 
+        //Make appear the picture of each Pokemon
         Glide
             .with(viewHolder.itemView.context)
             .load("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${position + 1}.png")

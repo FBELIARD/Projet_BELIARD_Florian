@@ -16,6 +16,7 @@ class PokeListViewModel : ViewModel() {
         callApi()
     }
 
+    //Call for getting values from the API
     private fun callApi() {
         pokeList.value = PokemonLoader
         PokeSingletons.pokeApi.getPokemonList().enqueue(object : Callback<PokeListResponse> {

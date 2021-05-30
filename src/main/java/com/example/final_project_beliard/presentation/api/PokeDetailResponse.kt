@@ -1,5 +1,6 @@
 package com.example.final_project_beliard.presentation.api
 
+//values used for the detail fragment. These are the values shown on the screen
 data class PokemonDetailResponse(
     val name: String,
     val id: String,

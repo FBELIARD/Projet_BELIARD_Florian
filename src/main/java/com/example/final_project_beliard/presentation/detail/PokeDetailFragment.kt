@@ -33,6 +33,7 @@ class PokeDetailFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_poke_detail, container, false)
     }
 
+    //Add elements to the view
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -43,6 +44,7 @@ class PokeDetailFragment : Fragment() {
         callAPi()
     }
 
+    //Call for getting values from the API
     private fun callAPi() {
         val id = arguments?.getInt("pokemonId") ?: -1
         PokeSingletons.pokeApi.getPokemonDetail(id).enqueue(object : Callback<PokemonDetailResponse>{

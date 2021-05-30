@@ -27,6 +27,7 @@ import retrofit2.Response
  */
 class PokeListFragment : Fragment() {
 
+    //General variables
     private lateinit var recyclerView: RecyclerView
     private lateinit var loader: ProgressBar
     private lateinit var textViewError: TextView
@@ -37,6 +38,7 @@ class PokeListFragment : Fragment() {
 
     private val layoutManager = LinearLayoutManager(context)
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,6 +47,7 @@ class PokeListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_poke_list, container, false)
     }
 
+    //Add elements to the view
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -74,10 +77,12 @@ class PokeListFragment : Fragment() {
 
     }
 
+    //Dummy function for upcoming overhauls
     private fun saveListIntoCache() {
 
     }
 
+    //Call for getting values from the API
     private fun callApi() {
         PokeSingletons.pokeApi.getPokemonList().enqueue(object : Callback<PokeListResponse> {
             override fun onFailure(call: Call<PokeListResponse>, t: Throwable) {
@@ -95,10 +100,12 @@ class PokeListFragment : Fragment() {
         })
     }
 
+    //Show list of values from the API
     private fun showList(pokeList: List<Poke>) {
         adapter.updateList(pokeList)
     }
 
+    //Send the user in the detail fragment
     private fun onClickedPokemon(id: Int) {
 
         findNavController().navigate(R.id.navigateToPokemonDetailFragment, bundleOf("pokemonId" to (id + 1)))

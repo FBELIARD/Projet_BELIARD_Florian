@@ -20,3 +20,6 @@ En cliquant sur le nom d'un Pokémon présent dans l'API, nous obtenons des info
 
 ![image](https://user-images.githubusercontent.com/84351903/120116066-a2709e00-c186-11eb-9f93-e33052a09ad3.png)
 
+# Design
+
+Pour mon projet, j'ai choisi des teintes de pourpre, pour donner à mon site un style accueillant et épuré. J'ai également aligné les éléments du site, de façon à améliorer la visibilité. Par exemple

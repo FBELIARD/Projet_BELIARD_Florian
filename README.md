@@ -11,3 +11,6 @@ Nous avons également un petit bouton flottant, servant d'explication à l'utili
 ![image](https://user-images.githubusercontent.com/84351903/120114626-591d5000-c180-11eb-9d15-fc908ab4e70e.png)
 
 En outre, en cliquant sur le nom d'un Pokémon présent dans l'API, nous obtenons des informations complémentaires sur ce dernier, telles que son ID, sa taille et son poids, comme ceci :
+
+![image](https://user-images.githubusercontent.com/84351903/120114686-a13c7280-c180-11eb-8e9d-600f78aae725.png)
+

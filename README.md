@@ -10,6 +10,8 @@ Au cours de ce projet, j'ai implémenté une API nommée PokéAPI dans mon appli
 
 Le programme va chercher dans une API, l'API du site https://pokeapi.co/ toutes les informations correspondant à chaque Pokémon, telles que son nom, ou encore son image qui lui correspond. Ici, on voit par exemple qu'au Pokémon "Charmander" est associé une image dudit Pokémon.
 
+Une Recycler View est utilisée pour pouvoir afficher les éléments de la liste de façon cohérente par rapport à l'API utilisée
+
 Nous avons également un petit bouton flottant, servant d'explication à l'utilisateur, lui indiquant comment fonctionne l'application, et quel est son but.
 
 ![image](https://user-images.githubusercontent.com/84351903/120114626-591d5000-c180-11eb-9d15-fc908ab4e70e.png)

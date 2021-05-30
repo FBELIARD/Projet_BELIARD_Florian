@@ -8,6 +8,6 @@ Le programme va chercher dans une API, l'API du site https://pokeapi.co/ toutes 
 
 Nous avons également un petit bouton flottant, servant d'explication à l'utilisateur, lui indiquant comment fonctionne l'application, et quel est son but.
 
-![image](https://user-images.githubusercontent.com/84351903/120114304-da73e300-c17e-11eb-9338-ab3a8a4c4253.png)
+![image](https://user-images.githubusercontent.com/84351903/120114626-591d5000-c180-11eb-9d15-fc908ab4e70e.png)
 
 En outre, en cliquant sur le nom d'un Pokémon présent dans l'API, nous obtenons des informations complémentaires sur ce dernier, telles que son ID, sa taille et son poids, comme ceci :

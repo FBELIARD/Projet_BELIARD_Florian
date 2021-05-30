@@ -19,6 +19,7 @@ import retrofit2.Response
  */
 class PokeDetailFragment : Fragment() {
 
+    //Variables used for display elements in the detail fragment
     private lateinit var textViewName: TextView
     private lateinit var textViewId: TextView
     private lateinit var textViewHeight: TextView

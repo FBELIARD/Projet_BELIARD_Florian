@@ -1,5 +1,6 @@
 package com.example.final_project_beliard
 
+import com.example.final_project_beliard.presentation.PokeSingletons
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -13,5 +14,10 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
+    }
+
+    @Test
+    fun test_implementation_recyclerView() {
+
     }
 }
